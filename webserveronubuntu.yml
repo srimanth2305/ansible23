@@ -1,12 +1,12 @@
 ---
--hosts: all
- become:yes
- gather_facts:yes
- tasks:
- -name: install webserver on ubuntu(apache2)
- apt:
- name: apache2
- state: present
- -name: start the apache2 service
- state: started
- 
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+  - name: install webserver on ubuntu(apache2)
+    apt:
+     name: apache2
+     state: present
+  - name: start the apache2 service
+    state: started
+
